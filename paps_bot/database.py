@@ -62,7 +62,7 @@ def create_table_sql():
     """
     Function creating a blank table, if it does not already exist, in postgreSQL
     """
-    conn = psycopg2.connect(DB_CONNECTION_STRING)
+    conn = create_connection()
     cur = conn.cursor()
     table_name = "paps_table"
     sql_table_query = sql.SQL(
